@@ -4,7 +4,7 @@ import {
 import { IColumnFilter } from './ColumnFilterCheckBoxList';
 import * as FC from './ColumnFilterCheckBoxList';
 import * as FilterUtils from '../utils/FilterUtils';
-import { ColumnFilterArray, IColumnFilterArray } from './ColumnFilterArray';
+import { ColumnFilterArray } from './ColumnFilterArray';
 import { ColumnFilterCombo, initStartYear, initEndYear, initCityPopSize } from './ColumnFilterCombo';
 import { IFilterChecker } from './FilterChecker';
 import GroupBy, { initGroupMap } from './GroupBy';
@@ -35,8 +35,8 @@ export default class FilterStore {
       this.injurySeverity = FC.initInjurySeverity();
       this.setCasualtiesNames(this.injurySeverity);
       // when
-      this.startYear = initStartYear();
-      this.endYear = initEndYear();
+      this.startYear = initStartYear(2019);
+      this.endYear = initEndYear(2023);
       this.dayNight = FC.initDayNight();
       // where
       this.locationAccuracy = FC.initLocationAccuracy();
